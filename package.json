@@ -1,6 +1,6 @@
 {
   "name": "home_bookkeeper",
-  "product-name" : "Home Bookkeeper",
+  "product-name": "Home Bookkeeper",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
@@ -27,7 +27,12 @@
     "jshint": "^2.9.1"
   },
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
     "fs-extra": "^0.26.5",
+    "metismenu": "^2.4.0",
     "path": "^0.12.7",
     "rimraf": "^2.5.2"
   }
