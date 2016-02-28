@@ -1,0 +1,34 @@
+{
+  "name": "home_bookkeeper",
+  "product-name" : "Home Bookkeeper",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "buildwin": "node tasks/installer-win/build-exe-win.js",
+    "buildx": "node tasks/installer-osx/build-app-osx.js",
+    "build": "npm run buildx && npm run buildwin",
+    "buildwin-noasar": "export NO_ASRAR=TRUE && node tasks/installer-win/build-exe-win.js",
+    "buildx-release": "node tasks/installer-osx/build-dmg-osx.js && python tasks/installer-osx/licenseDMG.py 'builds/mac/Group Marketer.dmg' license.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neaptolem/home_bookkeeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neaptolem/home_bookkeeper/issues"
+  },
+  "homepage": "https://github.com/neaptolem/home_bookkeeper#readme",
+  "description": "",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.9",
+    "jshint": "^2.9.1"
+  },
+  "dependencies": {
+    "fs-extra": "^0.26.5",
+    "path": "^0.12.7",
+    "rimraf": "^2.5.2"
+  }
+}

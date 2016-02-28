@@ -1,0 +1,15 @@
+{
+  "browser": true,
+  "predef": ["$", "app", "Chart", "QueryParams", "moment", "I18n", "FileReader", "Mustache", "jQuery", "Confirm", "google"],
+  "node": true,
+  "devel": true,
+  "expr": true,
+  "esversion": 6,
+  "indent": 2,
+  "undef": true,
+  "unused": true,
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "latedef": false
+}

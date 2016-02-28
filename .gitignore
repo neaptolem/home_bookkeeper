@@ -1,0 +1,22 @@
+
+## Directory-based project format:
+.idea/
+
+## File-based project format:
+*.ipr
+*.iws
+.DS_Store
+*.DS_Store
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+## node
+/node_modules/
+/builds/
+/temp/
+/src-darwin-x64/
+
+/js/services/share/userCredentials.json
