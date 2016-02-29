@@ -1,4 +1,4 @@
-angular.module('app.home',[])
+angular.module('app')
   .controller("HomeCtrl",function($scope) {
     console.log('homectrl');
     var d1 = new Date(1, 1, 16);
