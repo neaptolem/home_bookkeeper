@@ -1,25 +1,45 @@
-<div id="page-wraper">
-  <div class="row" ng-controller="HomeCtrl">
-    <div class="col-md-12">
-      <div class="panel-body">
-
-        <table class="table table-striped table-bordered tbale-hover">
-          <thead>
-            <tr>
-              <th>purchase</th>
-              <th>date</th>
-              <th>price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="item in purchases">
-              <td>{{item.purchase}}</td>
-              <td>{{item.date|date}}</td>
-              <td>{{item.price}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div id="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Tables</h1>
     </div>
+    <!-- /.col-lg-12 -->
   </div>
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          DataTable
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+          <div class="dataTable_wrapper">
+            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+              <thead>
+                <tr>
+                  <th>purchase</th>
+                  <th>date</th>
+                  <th>price</th>
+                </tr>
+              </thead>
+              <tbody ng-controller="HomeCtrl">
+                <tr class="odd" ng-repeat="item in purchases">
+                  <td>{{item.purchase}}</td>
+                  <td>{{item.date|date}}</td>
+                  <td>{{item.price}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.panel-body -->
+      </div>
+      <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
 </div>
+<!-- /#page-wrapper -->

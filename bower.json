@@ -1,0 +1,23 @@
+{
+  "name": "home_bookkeeper",
+  "description": "uni_project",
+  "main": "main.js",
+  "authors": [
+    "Neaptolem <Anneaptolemkob@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/neaptolem/home_bookkeeper",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datatables": "~1.10.4",
+    "datatables-plugins": "~1.0.1",
+    "datatables-responsive": "1.0.6"
+  }
+}
