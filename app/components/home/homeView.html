@@ -1,0 +1,25 @@
+<div id="page-wraper">
+  <div class="row" ng-controller="HomeCtrl">
+    <div class="col-md-12">
+      <div class="panel-body">
+
+        <table class="table table-striped table-bordered tbale-hover">
+          <thead>
+            <tr>
+              <th>purchase</th>
+              <th>date</th>
+              <th>price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in purchases">
+              <td>{{item.purchase}}</td>
+              <td>{{item.date|date}}</td>
+              <td>{{item.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
