@@ -2,5 +2,6 @@ angular.module('app', [
   'app.routes',
   'app.directive.navbar',
   'app.directive.pagetitle',
-  'smart-table'
+  'smart-table',
+  'chartjs-directive'
 ]);
