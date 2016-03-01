@@ -1,8 +1,8 @@
 angular.module('app')
-  .controller("HomeCtrl",function($scope) {
+.controller("HomeCtrl",['$scope',function(scope) {
     console.log('homectrl');
-    var d1 = new Date(1, 1, 16);
-    var d2 = new Date(2, 1, 16);
+    var d1 = new Date(2011, 1, 3);
+    var d2 = new Date(2016, 1, 2);
     var d3 = new Date();
 
     var test = [{
@@ -19,5 +19,5 @@ angular.module('app')
       price: 12
     }];
 
-    $scope.purchases = test;
-  });
+    scope.purchases = test;
+  }]);

@@ -16,8 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "datatables": "~1.10.4",
-    "datatables-plugins": "~1.0.1",
-    "datatables-responsive": "1.0.6"
   }
 }

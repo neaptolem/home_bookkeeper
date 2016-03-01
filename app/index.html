@@ -6,30 +6,24 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/metismenu/dist/metisMenu.min.css">
     <link rel="stylesheet" href=" ../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css">
-    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
     <!-- custom styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
-<div id="wraper">
-    <navbar></navbar>
-    <div ng-view></div>
- </div>
- <!-- freamworks    -->
+    <div id="wraper">
+      <navbar></navbar>
+      <div id="page-wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
+    <!-- freamworks    -->
     <script src="../node_modules/angular/angular.min.js"></script>
     <script src="../node_modules/angular-route/angular-route.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../node_modules/metismenu/dist/metisMenu.min.css"></script>
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-    <script src="../bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
-    <!-- custom script -->
-    <script scr="components/home/homeModule.js"></script>
-    <script src="app.routes.js"></script>
-    <script src="shared/navbar/navbarDirective.js"></script>
-    <script src="app.module.js"></script>
+    <script src="../node_modules/metismenu/dist/metisMenu.js"></script>
+    <script src="../node_modules/angular-smart-table/dist/smart-table.min.js"></script>
+      <script src="../dist/build.js"></script>
 
-  </body>
-</html>
+    </body>
+  </html>
