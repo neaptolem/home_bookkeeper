@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "angular-chartjs-directive": "^1.0.0"
   }
 }
