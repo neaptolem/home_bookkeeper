@@ -1,0 +1,12 @@
+{
+  "dependencies": [
+    "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/angular/angular.js",
+    "./node_modules/angular-route/angular-route.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "./node_modules/metismenu/dist/metisM.js",
+    "./node_modules/angular-smart-table/dist/smart-table.js",
+    "./node_modules/chart.js/Chart.js",
+    "./node_modules/angular-chart.js/dist/angular-chart.js"
+  ]
+}

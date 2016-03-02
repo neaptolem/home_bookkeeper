@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "gulp&&electron .",
     "buildwin": "node tasks/installer-win/build-exe-win.js",
     "buildx": "node tasks/installer-osx/build-app-osx.js",
     "build": "npm run buildx && npm run buildwin",
@@ -27,6 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.3",
     "jshint": "^2.9.1"
   },
   "dependencies": {
