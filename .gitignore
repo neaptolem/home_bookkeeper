@@ -15,8 +15,10 @@
 
 ## node
 /node_modules/
+/bower_components/
 /builds/
 /temp/
+/dist/
 /src-darwin-x64/
 
 /js/services/share/userCredentials.json

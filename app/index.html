@@ -6,24 +6,20 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/metismenu/dist/metisMenu.min.css">
     <link rel="stylesheet" href=" ../node_modules/font-awesome/css/font-awesome.min.css">
-
-<!-- custom styles -->
+    <link href="../node_modules/angular-chart.js/dist/angular-chart.min.css">
+    <!-- custom styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
-    <navbar></navbar>
-    <div ng-view></div>
-
+    <div id="wraper">
+      <navbar></navbar>
+      <div id="page-wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
     <!-- freamworks    -->
-    <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="../node_modules/angular-route/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../node_modules/metismenu/dist/metisMenu.min.css"></script>
+    <script src="../dist/js/vendor.js"></script>
+    <script src="../dist/js/build.js"></script>
 
-    <!-- custom script -->
-    <script src="app.module.js"></script>
-    <script src="app.route.js"></script>
-    <script src="shared/navbar/navbarDirective.js"></script>
   </body>
 </html>

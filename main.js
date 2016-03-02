@@ -31,16 +31,17 @@ var mainWindow;
 
 electronApp.on('ready', function () {
   mainWindow = new BrowserWindow({
-    width: 500,
-    height: 400,
+    width: 1000,
+    height: 800,
     'min-width': 400,
     'min-height': 300,
     title: pJSON['product-name'] + ' ' + pJSON['version']
   });
-  mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
-  if (exports.ENV === 'DEVELOPMENT') {
-    mainWindow.openDevTools();
-  }
+  setTimeout(() => {
+    mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
+  },4000);
+  mainWindow.openDevTools();
+
 });
 
 exports.setTitle = function (name) {
