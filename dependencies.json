@@ -3,10 +3,19 @@
     "./node_modules/jquery/dist/jquery.js",
     "./node_modules/angular/angular.js",
     "./node_modules/angular-route/angular-route.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.js",
-    "./node_modules/metismenu/dist/metisM.js",
     "./node_modules/angular-smart-table/dist/smart-table.js",
+    "./node_modules/metismenu/dist/metisM.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.js"
+  ],
+  "dependenciesChart": [
     "./node_modules/chart.js/Chart.js",
-    "./node_modules/angular-chart.js/dist/angular-chart.js"
+    "./node_modules/angular-chart.js/dist/angular-chart.min.js"
+  ],
+  "dependenciesCss": [
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "./node_modules/metismenu/dist/metisMenu.min.css",
+    "./node_modules/font-awesome/css/font-awesome.min.css",
+    "./node_modules/angular-chart.js/dist/angular-chart.min.css",
+    "./assets/css/style.css"
   ]
 }
