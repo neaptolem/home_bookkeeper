@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../dist/css/style.css">
-  </head>
-  <body>
-    <div id="wraper">
-      <navbar></navbar>
-      <div id="page-wrapper">
-        <div ng-view></div>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/metismenu/dist/metisMenu.min.css">
+    <link rel="stylesheet" href=" ../node_modules/font-awesome/css/font-awesome.min.css">
+    <link href="../node_modules/angular-chart.js/dist/angular-chart.min.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div id="wraper">
+    <navbar></navbar>
+    <div id="page-wrapper">
+      <div ng-view></div>
     </div>
-    <!-- freamworks    -->
-    <script src="js/vendor.js"></script>
-    <script src="js/build.js"></script>
-    <script src="js/chartlib.js"></script>
-  </body>
+  </div>
+  <!-- freamworks    -->
+  <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/metismenu/dist/metisMenu.js"></script>
+    <script src="../node_modules/angular-smart-table/dist/smart-table.min.js"></script>
+    <script src="../node_modules/chart.js/Chart.min.js" charset="utf-8"></script>
+    <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="../dist/js/build.js"></script>
+</body>
+
 </html>

@@ -31,7 +31,10 @@ gulp.task('templates', function() {
   return gulp.src('./app/index.html')
   .pipe(gulp.dest('./dist'));
 });
-
+gulp.task('config', function() {
+  return gulp.src('./app/sync-gateway-config.json')
+  .pipe(gulp.dest('./dist'));
+});
 gulp.task('clean', function () {
   return gulp.src('dist')
     .pipe(clean());
@@ -43,5 +46,5 @@ gulp.task('templatesDirect', function() {
 });
 
 gulp.task('default', ['clean'], function () {
-  gulp.start('buildLib','jsUglify','templatesDirect','templates','buildChart','buildCSS');
+  gulp.start('jsUglify');
 });

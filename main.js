@@ -38,7 +38,7 @@ electronApp.on('ready', function() {
     title: pJSON['product-name'] + ' ' + pJSON['version']
   });
 
-  mainWindow.loadURL(`file:///${__dirname}/dist/index.html`);
+  mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
   mainWindow.openDevTools();
 
 });
