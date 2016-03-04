@@ -19,17 +19,17 @@ const APP_NAME = 'HomeBookkeeper';
 exports.PATH_TO_TEMP = createPathConst(electronApp.getPath('temp'), APP_NAME);
 exports.PATH_TO_APP_DATA = createPathConst(electronApp.getPath('appData'), APP_NAME);
 
-exports.log = function (message) {
+exports.log = function(message) {
   console.log(message);
 };
 
-electronApp.on('window-all-closed', function () {
-	electronApp.quit;// only this use as onClose
+electronApp.on('window-all-closed', function() {
+  electronApp.quit; // only this use as onClose
 });
 
 var mainWindow;
 
-electronApp.on('ready', function () {
+electronApp.on('ready', function() {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
@@ -37,14 +37,13 @@ electronApp.on('ready', function () {
     'min-height': 300,
     title: pJSON['product-name'] + ' ' + pJSON['version']
   });
-  setTimeout(() => {
-    mainWindow.loadURL(`file:///${__dirname}/dist/index.html`);
-  },4000);
+
+  mainWindow.loadURL(`file:///${__dirname}/dist/index.html`);
   mainWindow.openDevTools();
 
 });
 
-exports.setTitle = function (name) {
+exports.setTitle = function(name) {
   if (name) mainWindow.setTitle(name + ' ' + pJSON['version']);
   else mainWindow.setTitle(pJSON['product-name'] + ' ' + pJSON['version']);
 };
