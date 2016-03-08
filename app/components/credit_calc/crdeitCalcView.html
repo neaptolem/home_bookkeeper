@@ -1,0 +1,20 @@
+<div class="container" ng-controller="creditCalcCtrl">
+
+  <form name="form">
+    <fieldset class="form-group">
+      <label for="formGroupExampleInput">Principial, $</label>
+      <input type="number" class="form-control" id="formGroupExampleInput" placeholder="100 ..." ng-model="calc.principial" required ng-keyup="($event.keyCode == 13 && calc.principial.length > 0) ? calculate(calc) : return">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="formGroupExampleInput2">Interest Rate, %</label>
+      <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="18 ..." ng-model="calc.rate" required ng-keyup="($event.keyCode == 13 && calc.rate.length > 0) ? calculate(calc) : return">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="formGroupExampleInput2"># of Payments, month</label>
+      <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="12 ..." ng-model="calc.term" required ng-keyup="($event.keyCode == 13 && calc.term.length > 0) ? calculate(calc) : return">
+    </fieldset>
+    <button type="button" class="btn btn-primary" ng-click="calculate(calc)" ng-hide="form.calc.principial.$invalid||form.calc.rate.$invalid||form.calc.term.$invalid">Calculate</button>
+  </form>
+  <div>summary = {{result | currency}}</div>
+  <div>per mounth={{perMounth | currency }}</div>
+</div>

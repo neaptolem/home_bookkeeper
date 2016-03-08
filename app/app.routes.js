@@ -6,5 +6,8 @@ angular.module('app.routes', ['ngRoute'])
       })
       .when('/chart',{
         templateUrl:'components/chart/chartView.html'
+      })
+      .when('/calc/credit',{
+        templateUrl:'components/credit_calc/crdeitCalcView.html'
       });
   }]);
