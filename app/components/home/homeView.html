@@ -23,9 +23,9 @@
             </thead>
             <tbody>
               <tr ng-repeat="item in purchases">
-                <td>{{item.purchase}}</td>
+                <td>{{item.name}}</td>
                 <td>{{item.date|date}}</td>
-                <td>{{item.price}}</td>
+                <td class="{{item.type}}">{{item.price}} {{item.currency}}</td>
               </tr>
             </tbody>
           </table>

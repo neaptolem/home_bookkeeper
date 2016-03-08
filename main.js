@@ -42,7 +42,6 @@ electronApp.on('ready', function() {
   })
   mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
   mainWindow.openDevTools();
-
 });
 
 exports.setTitle = function(name) {
