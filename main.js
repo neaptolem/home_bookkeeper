@@ -37,7 +37,9 @@ electronApp.on('ready', function() {
     'min-height': 300,
     title: pJSON['product-name'] + ' ' + pJSON['version']
   });
-
+  mainWindow.webContents.on('did-finish-load',function(){
+    exports.setTitle();
+  })
   mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
   mainWindow.openDevTools();
 
