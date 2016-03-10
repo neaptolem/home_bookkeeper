@@ -35,3 +35,4 @@ var test = [{
 }
 
 ];
+window.test = test;
