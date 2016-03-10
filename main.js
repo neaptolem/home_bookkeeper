@@ -24,7 +24,7 @@ exports.log = function(message) {
 };
 
 electronApp.on('window-all-closed', function() {
-  electronApp.quit; // only this use as onClose
+  electronApp.quit(); // only this use as onClose
 });
 
 var mainWindow;
