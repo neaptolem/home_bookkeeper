@@ -64,7 +64,8 @@ angular.module('app.service.data', []).factory('database', function() {
   databaseFuncs = {
     put: obj => db.put(putOptions, normalizeRow(obj)),
     putAll: objects => db.putAll(putOptions, objects.map(obj => normalizeRow(obj))),
-    getAll: () => db.values('item')
+    getAll: () => db.values('item'),
+    remove: id => db.remove('item', id)
   },
   outObj = {},
   db;
