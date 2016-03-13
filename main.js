@@ -37,11 +37,11 @@ electronApp.on('ready', function() {
     'min-height': 300,
     title: pJSON['product-name'] + ' ' + pJSON['version']
   });
-  mainWindow.webContents.on('did-finish-load',function(){
-    exports.setTitle();
-  })
-  mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
   mainWindow.openDevTools();
+  mainWindow.webContents.on('did-finish-load', function() {
+    exports.setTitle();
+  });
+  setTimeout(() => mainWindow.loadURL(`file:///${__dirname}/app/index.html`), 1000);
 });
 
 exports.setTitle = function(name) {
