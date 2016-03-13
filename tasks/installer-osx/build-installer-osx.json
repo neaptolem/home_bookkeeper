@@ -1,5 +1,5 @@
 {
-  "title": "Group Marketer",
+  "title": "Home Bookkeeper",
   "icon": "./resources/img.icns",
   "background": "./resources/background.png",
   "icon-size": 80,
@@ -14,7 +14,7 @@
       "x": 160,
       "y": 270,
       "type": "file",
-      "path": "../../builds/mac/Group Marketer-darwin-x64/Group Marketer.app"
+      "path": "../../builds/mac/Home Bookkeeper-darwin-x64/Home Bookkeeper.app"
     }
   ]
 }
