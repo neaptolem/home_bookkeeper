@@ -37,7 +37,7 @@ angular.module('app')
   })
   .then(purchases => {
     $scope.purchases = purchases;
-    $scope.$applyAsync();
+    $scope.$apply();
   })
   .catch(reason => {
     //console.error(reason);

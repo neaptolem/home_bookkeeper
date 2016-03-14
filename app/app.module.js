@@ -4,5 +4,6 @@ angular.module('app', [
   'app.directive.pagetitle',
   'app.service.data',
   'chart.js',
-  'smart-table'
+  'smart-table',
+  'jkuri.datepicker'
 ]);

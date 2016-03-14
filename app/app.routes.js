@@ -1,5 +1,3 @@
-
-
 angular.module('app.routes', ['ngRoute'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -11,5 +9,8 @@ angular.module('app.routes', ['ngRoute'])
       })
       .when('/calc/credit',{
         templateUrl:'components/credit_calc/crdeitCalcView.html'
+      })
+      .when('/add',{
+        templateUrl:'components/add/addView.html'
       });
   }]);
