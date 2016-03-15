@@ -41,7 +41,8 @@ electronApp.on('ready', function() {
   mainWindow.webContents.on('did-finish-load', function() {
     exports.setTitle();
   });
-  setTimeout(() => mainWindow.loadURL(`file:///${__dirname}/app/index.html`), 1000);
+  mainWindow.loadURL(`file:///${__dirname}/app/index.html`);
+  // setTimeout(() => mainWindow.loadURL(`file:///${__dirname}/app/index.html`), 1000);
 });
 
 exports.setTitle = function(name) {
