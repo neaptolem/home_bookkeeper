@@ -16,9 +16,9 @@
                 <th>date</th>
                 <th>price</th>
               </tr>
-
               <tr>
-                <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="search"/></th>
+                <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="search"/>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -26,17 +26,14 @@
                 <td>{{item.name}}</td>
                 <td>{{item.date|date}}</td>
                 <td class="{{item.type}}">{{item.price}} {{item.currency}}</td>
+                <td>
+                  <span ng-repeat="tag in item.tags track by $index">{{tag}} </span>
+                </td>
               </tr>
             </tbody>
           </table>
-
         </div>
-        <!-- /.table-responsive -->
       </div>
-      <!-- /.panel-body -->
     </div>
-    <!-- /.panel -->
   </div>
-  <!-- /.col-lg-12 -->
 </div>
-<!-- /.row -->

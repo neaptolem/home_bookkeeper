@@ -1,6 +1,19 @@
 {
   "browser": true,
-  "predef": ["$", "app", "Chart", "QueryParams", "moment", "I18n", "FileReader", "Mustache", "jQuery", "Confirm", "google"],
+  "predef": [
+    "$",
+    "app",
+    "angular",
+    "Chart",
+    "QueryParams",
+    "moment",
+    "I18n",
+    "FileReader",
+    "Mustache",
+    "jQuery",
+    "Confirm",
+    "google"
+  ],
   "node": true,
   "devel": true,
   "expr": true,
