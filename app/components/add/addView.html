@@ -48,8 +48,8 @@
       <fieldset class="form-group">
         <label class="col-sm-3 control-label">tags</label>
         <div class="col-sm-9">
-          <p ng-repeat="tag in item.tags track by $index">
-            <input type="text" class="form-control" value="{{tag}}">
+          <p ng-repeat="(i, tag) in item.tags track by $index">
+            <input type="text" class="form-control" value="{{tag}}" ng-model="item.tags[i]">
           </p>
           <button class="btn btn-success" ng-click="addTag(item)">New Tag</button>
         </div>

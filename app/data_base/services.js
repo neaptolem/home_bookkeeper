@@ -48,6 +48,7 @@ angular.module('app.service.data', []).factory('database', function() {
     },
     create = function() {
       db = new ydn.db.Storage('items-storage', schema);
+      window.db = db;
       return new Promise((res, rej) => {
         db.onReady(err => {
           if (err) {
