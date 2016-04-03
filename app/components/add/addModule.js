@@ -1,7 +1,7 @@
 angular.module('app')
   .controller('addCtrl', function($scope, database) {
+    $scope.item = $scope.item || {};
     $scope.addTag = function(item) {
-      console.log(item.tags);
       item.tags = item.tags || [];
       item.tags.push('asd');
     };
