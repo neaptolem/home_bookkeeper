@@ -1,10 +1,6 @@
 require('ydn.db');
 angular.module('app.service.data', []).factory('database', function() {
-  var tag_schema = {
-      name: 'tag',
-      keyPath: 'name'
-    },
-    item_schema = {
+  var item_schema = {
       name: 'item',
       keyPath: "id",
       autoIncrement: true,
@@ -27,7 +23,7 @@ angular.module('app.service.data', []).factory('database', function() {
       }]
     },
     schema = {
-      stores: [tag_schema, item_schema]
+      stores: [item_schema]
     },
     normalizeRow = function(val) {
       var strValidate = val => val ? val : "";
@@ -66,7 +62,10 @@ angular.module('app.service.data', []).factory('database', function() {
       put: obj => db.put(putOptions, normalizeRow(obj)),
       putAll: objects => db.putAll(putOptions, objects.map(obj => normalizeRow(obj))),
       getAll: () => db.values('item'),
-      remove: id => db.remove('item', id)
+      remove: id => db.remove('item', id),
+      custom: func => func(db),
+      getAllTags: () => db.from('item').select('tags').unique(true).list(),
+      getAllWhereTag: tagName => db.from('item').where('tags','=',tagName).list()
     },
     outObj = {},
     db;
