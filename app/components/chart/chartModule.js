@@ -7,6 +7,7 @@ angular.module('app')
         });
         $scope.$apply();
       });
+
     $scope.onSelect = function() {
       database.getAllWhereTag($scope.selectedTag)
         .then(tags => {
