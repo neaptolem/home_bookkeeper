@@ -10,15 +10,15 @@ angular.module('app')
 
     $scope.onSelect = function() {
       database.getAllWhereTag($scope.selectedTag)
-        .then(tags => {
-          console.log(tags);
-          tags = tags.sort(function(a, b) {
+        .then(items => {
+          console.log(items);
+          items = items.sort(function(a, b) {
             return +(a.date > b.date) || +(a.date === b.date) - 1;
           });
-          $scope.series = ['Series A'];
+          $scope.series = [$scope.selectedTag];
           $scope.labels = [];
           $scope.data = [[]];
-          tags.forEach(tag => {
+          items.forEach(tag => {
             $scope.labels.push(tag.date);
             $scope.data[0].push(tag.type === "income" ? tag.price : -tag.price);
           });
@@ -34,12 +34,4 @@ angular.module('app')
     $scope.onClick = function(points, evt) {
       console.log(points, evt);
     };
-
-    // Simulate async data update
-    $timeout(function() {
-      $scope.data = [
-        [28, 48, 40, 19, 86, 27, 90],
-        [65, 59, 80, 81, 56, 55, 40]
-      ];
-    }, 3000);
   });
