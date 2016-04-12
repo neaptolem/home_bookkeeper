@@ -8,7 +8,7 @@
   <div class="panel">
     <div class="panel-body">
       <select title="tags" ng-change="onSelect()" ng-model="selectedTag">
-        <option ng-repeat="item in tags track by $index" value="{{item}}">
+        <option ng-repeat="item in tags track by $index" value="{{item}}" ng-selected="{{true}}">
           {{item}}
         </option>
       </select>

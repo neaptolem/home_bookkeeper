@@ -8,9 +8,12 @@ angular.module('app.routes', ['ngRoute'])
         templateUrl:'components/chart/chartView.html'
       })
       .when('/calc/credit',{
-        templateUrl:'components/credit_calc/crdeitCalcView.html'
+        templateUrl:'components/credit_calc/creditCalcView.html'
       })
       .when('/add',{
         templateUrl:'components/add/addView.html'
+      })
+      .when('/converter',{
+        templateUrl:'components/currency_converter/currencyConverterView.html'
       });
   }]);

@@ -1,6 +1,6 @@
 angular.module('app')
 .controller("HomeCtrl", function($scope, database) {
-  database.create()
+   database.create()
   .then(database.getAll)
   .then(purchases => {
     if (purchases && purchases.length){
