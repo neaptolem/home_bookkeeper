@@ -1,0 +1,51 @@
+<div class="" ng-controller="CurrencyConverterCtrl">
+  <div class="container-fluid">
+    <h1 class="page-header">Currency Converter</h1>
+
+    <div class="col-lg-6 col-md-6 col-xs-12">
+      <form name="form">
+        <fieldset class="form-group">
+          <label for="rate_selector"></label>
+          <select id="rate_selector" ng-model="selectedRate">
+              <option ng-repeat="item in rates" value="{{item}}">
+                {{item.ccy}}/{{item.base_ccy}}
+              </option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="amountInput">Amount, {{getSelectedRate().ccy}}</label>
+          <input id="amountInput"
+                 type="number"
+                 class="form-control"
+                 ng-model="amount" required
+                 ng-change="calculate(amount)">
+        </fieldset>
+
+       <fieldset class="form-group">
+          <label for="amountOutput">Amount, {{getSelectedRate().base_ccy}}</label>
+          <input id="amountOutput"
+                 type="number"
+                 enabled="false"
+                 onkeydown="return false"
+                 class="form-control"
+                 value="{{result | currency}}"
+                 >
+        </fieldset>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+      while(true){
+      var rates = $('[ng-controller="CurrencyConverterCtrl]').scope().rates;
+      if(rates.length > 0){
+        $("#rate_selector").val(1)
+        break;
+      }
+     }
+
+    </script>
