@@ -1,8 +1,7 @@
-
-angular.module('app').controller('CurrencyConverterCtrl', ['$scope', 'Rates',function($scope, Rates) {
+angular.module('app').controller('CurrencyConverterCtrl', function($scope, Rates, $timeout) {
   Rates.getData().then(function(rates) {
     $scope.rates = rates
-  })
+  });
   $scope.getSelectedRate = function() {
     if ($scope.selectedRate == undefined) {
       return {
@@ -13,15 +12,17 @@ angular.module('app').controller('CurrencyConverterCtrl', ['$scope', 'Rates',fun
       }
     }
     return JSON.parse($scope.selectedRate)
-  }
+  };
 
-  $scope.parseRate = function(rateStr){
+  $scope.parseRate = function(rateStr) {
     return JSON.parse(rateStr)
-  }
+  };
 
   $scope.calculate = function(amount) {
-    var rate = $scope.getSelectedRate()
-    $scope.result = amount * rate.buy
-    $scope.$apply()
+    var rate = $scope.getSelectedRate();
+    $timeout(function() {
+      $scope.result = amount * rate.buy;
+      $scope.$apply();
+    }, 0);
   }
-}])
+});
