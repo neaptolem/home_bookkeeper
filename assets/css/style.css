@@ -284,6 +284,9 @@ table.dataTable thead .sorting:after {
 .income {
   color: green;
 }
-html, body, .wraper, #page-wrapper {
+html, body, #wraper {
   height: 100%;
+}
+#page-wrapper {
+  height: calc(100% - 50px);
 }

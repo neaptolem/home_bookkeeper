@@ -11,7 +11,6 @@ angular.module('app')
     $scope.onSelect = function() {
       database.getAllWhereTag($scope.selectedTag)
         .then(items => {
-          console.log(items);
           items = items.sort(function(a, b) {
             return +(a.date > b.date) || +(a.date === b.date) - 1;
           });
@@ -19,7 +18,7 @@ angular.module('app')
           $scope.labels = [];
           $scope.data = [[]];
           items.forEach(tag => {
-            $scope.labels.push(tag.date);
+            $scope.labels.push(tag.name);
             $scope.data[0].push(tag.type === "income" ? tag.price : -tag.price);
           });
           $scope.$apply();
